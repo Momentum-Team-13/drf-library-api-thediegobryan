@@ -22,4 +22,8 @@ urlpatterns = [
     path('', lib_views.BookList.as_view(), name="homepage"), 
     path('books/', lib_views.BookList.as_view(), name='book-list'),
     path('books/<int:pk>/', lib_views.BookDetail.as_view(), name='book-detail'),
+    path('book_record/', lib_views.Book_Record_List.as_view(), name="book-record-list"),
+    path('book_record/<int:pk>', lib_views.Book_Record_Detail.as_view(), name="book-record-detail"),
+    path('notes/', lib_views.NoteList.as_view(), name='note-list'),
+    path('notes/<int:pk>/', lib_views.BookDetail.as_view(), name='note-detail'),
 ]
